@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#354A70</color>
+    <color name="colorPrimaryDark">#C679B1</color>
+    <color name="colorAccent">#D0E0FE</color>
+    //Mis colores
+    <color name="colorBlack">#000000</color>
+    <color name="colorRed">#E8100C</color>
+    <color name="colorWhite">#F6F4FA</color>
+    <color name="colorBlue">#0001FA</color>
+    <color name="colorOrange">#E8500C</color>
+    <color name="colorGray">#3D4151</color>
+    <color name="colorPurple">#650CE8</color>
+    <color name="colorPink">#FF009E</color>
+    <color name="colorGreen">#0A9100</color>
+
+    //Colores Basicos de la aplicacion
+
+    <color name="color1">#FF0012</color>
+    <color name="color2">#000000</color>
+    <color name="color3">#F6F4FA</color>
+    <color name="color4">#5FE86B</color>
+    <color name="color5">#69FFF5</color>
+
 </resources>
