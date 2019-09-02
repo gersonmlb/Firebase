@@ -1,11 +1,14 @@
 <resources>
-    <string name="app_name">Login</string>
+    <string name="app_name">Tutorial-JAVA</string>
+
+    //Login
     <string name="email">Email</string>
     <string name="password">Contraseña</string>
     <string name="ingresar">Ingresar</string>
     <string name="registrar">Registrar</string>
     <string name="facebook_app_id">528892521208064</string>
     <string name="fb_login_protocol_scheme">fb528892521208064</string>
+
     <string name="title_activity_start">StartActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -14,11 +17,13 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
+    //Buttons Menu
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="menu_salir">Salir</string>
 
 </resources>

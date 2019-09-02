@@ -141,8 +141,8 @@ public class MainActivity extends AppCompatActivity {
                 String user = authResult.getUser().getDisplayName();
 
                 //Toast.makeText(MainActivity.this,"Te logeaste con el email: "+email, Toast.LENGTH_LONG).show();
-                Intent intencion = new Intent(getApplication(),ActivityWelcome.class);
-                intencion.putExtra(ActivityWelcome.user,user);
+                Intent intencion = new Intent(getApplication(),StartActivity.class);
+                intencion.putExtra(StartActivity.user,user);
                 startActivity(intencion);
             }
         });
@@ -180,15 +180,15 @@ public class MainActivity extends AppCompatActivity {
 
         //Verificamos que las cajas de texto no esten vacias
         if (TextUtils.isEmpty(email)){
-            Toast.makeText(this, "Ingrese porfavor Email", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Ingrese Email", Toast.LENGTH_LONG).show();
             return;
         }
         if (TextUtils.isEmpty(password)){
-            Toast.makeText(this,"Ingresar Porfavor Contraseña", Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"Ingresar Contraseña ", Toast.LENGTH_LONG).show();
             return;
         }
 
-        progressDialog.setMessage("Ingresando");
+        progressDialog.setMessage("Ingresando...");
         progressDialog.show();
 
         //Loguear Usuario
@@ -200,16 +200,18 @@ public class MainActivity extends AppCompatActivity {
                     String userFI = email.substring(0,pos);
 
                     Toast.makeText(MainActivity.this,"Logueo Exitoso ", Toast.LENGTH_LONG).show();
-                    Intent intencion = new Intent(getApplication(),ActivityWelcome.class);
-                    intencion.putExtra(ActivityWelcome.user,userFI);
+                    //Aqui mandas a la otra ventana
+                    Intent intencion = new Intent(getApplication(),StartActivity.class);
+                    //Aqui mandas el dato capturado a la variable de la vista la cual vas a cambiar
+                    intencion.putExtra(StartActivity.user,userFI);
                     startActivity(intencion);
 
                 }else{
 
                     if(task.getException() instanceof FirebaseAuthUserCollisionException){
-                        Toast.makeText(MainActivity.this,"Logueo Mal ",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,"Se logueo mal ",Toast.LENGTH_SHORT).show();
                     }else{
-                        Toast.makeText(MainActivity.this,"Ups Algo salio mal, no se ingreso",Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this,"Ups! Algo salio mal, no se pudo ingresar",Toast.LENGTH_LONG).show();
                     }
 
                 }
